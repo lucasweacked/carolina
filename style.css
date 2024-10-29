@@ -1,0 +1,63 @@
+/* Estilo geral */
+body { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+button {
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    border: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button:first-child {
+    background-color: green;
+}
+
+button:nth-child(2) {
+    background-color: red;
+}
+
+div.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas pequenas */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    button {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    div.buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 8px 20px;
+        font-size: 12px;
+        width: 100%; /* Faz o botão ocupar toda a largura da tela em dispositivos pequenos */
+    }
+}
